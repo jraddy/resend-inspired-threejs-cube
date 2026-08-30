@@ -218,20 +218,6 @@ h1 {
   isolation: isolate;
 }
 
-.cube-scene::before {
-  position: absolute;
-  z-index: 0;
-  width: min(65vw, 64rem);
-  aspect-ratio: 1;
-  border: 1px solid rgb(141 169 255 / 10%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgb(141 169 255 / 8%), transparent 65%);
-  content: "";
-  inset: 50% auto auto 50%;
-  transform: translate(-48%, -50%);
-  pointer-events: none;
-}
-
 .cube-canvas,
 .cube-poster {
   position: absolute;

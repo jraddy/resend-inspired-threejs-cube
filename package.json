@@ -1,0 +1,33 @@
+{
+  "name": "resend-inspired-threejs-cube",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An independent, polished Three.js interpretation of the iconic Resend cube.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Dario Simic (https://www.linkedin.com/in/dariosimic-de)",
+  "homepage": "https://jraddy.github.io/resend-inspired-threejs-cube/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jraddy/resend-inspired-threejs-cube.git"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "verify": "node scripts/verify.mjs",
+    "check": "npm run lint && npm run verify && npm run build"
+  },
+  "dependencies": {
+    "three": "0.185.1"
+  },
+  "devDependencies": {
+    "eslint": "10.9.1",
+    "vite": "8.2.2"
+  }
+}
+

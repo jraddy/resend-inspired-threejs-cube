@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090b10" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta
+      name="description"
+      content="An independent, polished Three.js interpretation of the iconic Resend cube by Dario Simic and RevoDev."
+    />
+    <meta property="og:title" content="Resend-inspired Three.js cube" />
+    <meta
+      property="og:description"
+      content="A framework-free WebGL study with 27 instanced pieces, tactile controls and resilient fallbacks."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./cube-fallback.png" />
+    <title>Resend-inspired Three.js cube</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#cube-controls">Skip to cube controls</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="https://revodev.de" rel="noreferrer">RevoDev <span>/ experiment 01</span></a>
+      <nav aria-label="Project links">
+        <a href="https://github.com/jraddy/resend-inspired-threejs-cube">Source</a>
+        <a href="https://www.linkedin.com/in/dariosimic-de" rel="noreferrer">LinkedIn</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="exhibit" aria-labelledby="page-title">
+        <div class="exhibit-copy">
+          <p class="kicker">Three.js / WebGL2 / 27 pieces</p>
+          <h1 id="page-title">A cube with<br />room to move.</h1>
+          <p class="intro">
+            A polished, independent interpretation of the iconic Resend cube. Drag to rotate it, or leave it to find
+            its own rhythm.
+          </p>
+
+          <div class="controls" id="cube-controls" role="group" aria-label="Cube controls">
+            <button class="control" type="button" data-pause disabled>Pause</button>
+            <button class="control" type="button" data-reset disabled>Reset</button>
+          </div>
+          <p class="control-note">Drag anywhere on the cube to change its view.</p>
+        </div>
+
+        <figure
+          class="cube-scene"
+          data-cube-scene
+          data-render-state="loading"
+          aria-labelledby="cube-caption"
+        >
+          <div class="cube-poster" data-cube-poster aria-hidden="true">
+            <img src="./cube-fallback.png" width="1024" height="683" alt="" />
+          </div>
+          <canvas class="cube-canvas" data-cube-canvas aria-hidden="true"></canvas>
+          <figcaption id="cube-caption" class="sr-only">
+            Interactive metallic cube made from 27 rounded pieces. Animation can be paused with the controls.
+          </figcaption>
+
+          <div class="axis axis-x" aria-hidden="true">x</div>
+          <div class="axis axis-y" aria-hidden="true">y</div>
+          <div class="axis axis-z" aria-hidden="true">z</div>
+
+          <aside class="status-rail" aria-label="Rendering status">
+            <div><span>Scene</span><strong data-status aria-live="polite">Loading</strong></div>
+            <div><span>Geometry</span><strong>3 × 3 × 3</strong></div>
+            <div><span>Renderer</span><strong>WebGL2</strong></div>
+          </aside>
+        </figure>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        This project grew out of
+        <a href="https://www.devslovecoffee.com/blog/making-the-resend-cube-from-scratch-using-three-js" rel="noreferrer">Peter’s Devs Love Coffee tutorial</a>,
+        and early iterations used and refined its example code. The public version has since been substantially
+        rewritten and extended by
+        <a href="https://www.linkedin.com/in/dariosimic-de" rel="noreferrer">Dario Simic</a> /
+        <a href="https://revodev.de" rel="noreferrer">RevoDev</a>.
+      </p>
+      <p class="disclaimer">Independent project. Not affiliated with, sponsored by or endorsed by Resend.</p>
+    </footer>
+
+    <noscript>
+      <div class="noscript-note">JavaScript is disabled. The static cube preview remains available above.</div>
+    </noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
